@@ -1,0 +1,728 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  html, body{
+    width: 100%;
+    height: 100%;
+  }
+  
+  #webpage{
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: #2A2479;
+  }
+  
+  
+  
+  #nav{
+    z-index: 99;
+    position: fixed;
+    display: flex;
+    padding: 8px 8px 10px 8px;
+    width: 100vw;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.034);
+  }
+  
+  #leftnav h1{
+    font-family: Millenia Personal Use;
+    font-style: italic;
+    margin-left: 40px;
+    font-size: 40px;
+    color: white;
+  }
+  
+  #leftnav h1:hover{
+    color: #FEC601;
+  }
+  
+  #centernav a{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    text-decoration: none;
+    margin-right: 17px;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  
+  #centernav a:hover{
+    cursor: pointer;
+    color: #FEC601;
+  }
+  
+  #centernav a:nth-child(2){
+    color: #FEC601;
+  }
+  
+  #centernav #dot{
+    margin-left: 20px;
+    margin-bottom: 4px;
+    width: 8px;
+    height: 8px;
+    background-color: #FEC601;
+    border-radius: 50%;
+    z-index: 99;
+  }
+  
+  #rightnav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-right: 40px;
+    font-size: 25px;
+    color: white;
+  }
+  
+  #rightnav i{
+    margin-left: 20px;
+  }
+  
+  #rightnav #icover:hover{
+    color: #FEC601;
+    cursor: pointer;
+  }
+  
+  #rightnav #grp:hover{
+    color: #FEC601;
+    cursor: pointer;
+  }
+  
+  #rightnav i:nth-child(2){
+    margin-left: 0;
+  }
+  
+  #selectionzone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 40vh;
+    /* background-color: whitesmoke; */
+  }
+  
+  #txt{
+    position: absolute;
+    top: 10%;
+    margin-bottom: 5px;
+  }
+  
+  #txt p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: white;
+  }
+  
+  #categories{
+    min-width: 15vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 16%;
+  }
+  
+  .activities{
+    transition: all .2s ease-in-out;
+    border-radius: 5px;
+    margin: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 45px;
+    background-color: #FEC601;
+    color: #2A2479;
+    font-size: 17px;
+  }
+  
+  .activities i{
+    margin-right: 5px;
+  }
+  
+  .activities:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  
+  #sources{
+    top: 26%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35vw;
+    height: 8vh;
+    /* background-color: black; */
+  }
+  
+  .crcl{
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* background-color: rgb(255, 255, 255); */
+  }
+  
+  .crcl img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    filter: grayscale(100%);
+  }
+  
+  #sources .crcl:nth-child(1){
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+  }
+  
+  
+  #frim img{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    filter: grayscale(0) !important;
+  }
+  
+  
+  #frim:hover{
+    cursor: pointer !important;
+    width: 55px !important;
+    height: 55px !important;
+    border-radius: 50% !important;
+  }
+  
+  #frim img:hover{
+    cursor: pointer !important;
+    width: 55px !important;
+    height: 55px !important;
+    border-radius: 50% !important;
+  }
+  
+  .crcl:hover{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .crcl img:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  #contenttype{
+    display: flex;
+    position: absolute;
+    top: 35%;
+  }
+  
+  #backd{
+    margin-top: 150px;
+    width: 100vw;
+    height: 350vh;
+    background-color: #8034B2;
+  }
+  
+  #content{
+    overflow: hidden;
+    padding: 10px 50px;
+    position: absolute;
+    top: 45%;
+    width: 100vw;
+    height: 371vh;
+    /* background-color: rgba(255, 255, 255, 0.274); */
+  }
+  
+  #head{
+    height: 20px;
+    width: 475px;
+    display: flex;
+    position: absolute;
+    left: 40px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+  
+  
+  #head i{
+    font-size: 20px;
+  }
+  
+  .cardcover{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    position: absolute;
+    top: 2%;
+    left: 43px;
+    width: 92vw;
+    height: 320px;
+    /* background-color: teal; */
+  }
+  
+  .card{
+    width: 14vw;
+    height: 50vh;
+    background-color: transparent;
+  }
+  
+  .card:hover{
+    cursor: pointer;
+  }
+  
+  .card .top{
+    width: inherit;
+    height: 37vh;
+    background-image: url(https://www.starwarsnewsnet.com/wp-content/uploads/2020/11/The-Mandalorian-Season-2-OST-Volume-1.jpg);
+    background-size: cover;
+    background-position: right;
+  }
+  
+  .card .bottom{
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    flex-direction: column;
+    width: inherit;
+    height: 13vh;
+    background-color: rgba(255, 255, 255, 0.158);
+  }
+  
+  .card .bottom h3{
+    font-size: 16px;
+    color: white;
+    font-weight: 100;
+    letter-spacing: 1px;
+  }
+  
+  .card .bottom h4{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.705);
+    font-weight: 100;
+    letter-spacing: 1px;
+  }
+  
+  #content #two{
+    top: 18%;
+  }
+  
+  #content #three{
+    top: 34%;
+  }
+  
+  #content #four{
+    top: 50%;
+  }
+  
+  #content #five{
+    top: 66%;
+  }
+  
+  #content #six{
+    top: 82%;
+  }
+  
+  #two .top{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEP3KpZdeJ-uTAqWuUdCAQfpBU0Mah7_webYjTmwpTpE9YSomMoWRaQZ2W8tiOR2jk4cs&usqp=CAU) !important;
+  }
+  
+  #three .top{
+    background-image: url(https://flxt.tmsimg.com/assets/p7892673_b1t_v9_aa.jpg);
+  }
+  
+  #four .top{
+    background-image: url(https://resizing.flixster.com/wCJ4WhGTi9WNAMmlsabEzDstj4I=/206x305/v2/https://flxt.tmsimg.com/assets/p185113_b_v13_bg.jpg);
+  }
+  
+  #five .top{
+    background-image: url(https://image.api.playstation.com/vulcan/ap/rnd/202011/0402/C784xeOFo2wViCf4m5bxgoeH.png);
+  }
+  
+  #six .top{
+    background-image: url(https://m.media-amazon.com/images/M/MV5BNDg1Zjc4YzktMmRmZi00ZWJmLWJiYzgtYjg3MmE0OTM1NzY5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg);
+  }
+  
+  #iicover{
+    display: none;
+  }
+  
+  #iicover input{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    position: absolute;
+    left: 81%;
+    top: 33%;
+    width: 10vw;
+    height: 4vh;
+    border-radius: 2px;
+    background-color: #ffffff;
+    border: solid;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.493);
+    font-size: 13.5px;
+    color: rgb(0, 0, 0);
+    font-weight: 100;
+  }
+  
+  #drpdn hr{
+    width: 70px;
+    height: 1px;
+    border-color: rgba(80, 80, 80, 0.623);
+  }
+  
+  #drpdn{
+    padding: 10px;
+    position: absolute;
+    top: 90%;
+    left: 90%;
+    display: none;
+    justify-content: space-between;
+    align-items: left;
+    flex-direction: column;
+    width: 7vw;
+    height: 24vh;
+    background-color: #ffffff1f;
+  }
+  
+  #drpdn h5{
+    letter-spacing: 1px;
+    color: aqua;
+    font-size: 16px;
+    font-weight: 100;
+  }
+  
+  #drpdn h5:hover{
+    color: #FEC601;
+    cursor: pointer;
+  }
+  
+  .hvcover{
+    display: none;
+    position: absolute;
+    width: inherit;
+    height: 37vh;
+    background-color: rgba(0, 0, 0, 0.534);
+  }
+  
+  
+  .btns{
+    position: absolute;
+    top: 75%;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+  
+  .hvcover h3{
+    position: absolute;
+    top: 37%;
+    left: 7%;
+    font-size: 18px;
+    color: rgb(218, 218, 218);
+    font-weight: 100;
+  }
+  
+  #watch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    left: 10%;
+    background-color: rgba(73, 73, 73, 0.575);
+  }
+  
+  #watch:hover{
+    transform: scale(1.5);
+    background-color: #FEC601;
+    color: black;
+  }
+  
+  #save{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    left: 40%;
+    background-color: rgba(73, 73, 73, 0.575);
+  }
+  
+  #save:hover{
+    transform: scale(1.5);
+    background-color: #FEC601;
+    color: black;
+  }
+  
+  #block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    left: 70%;
+    background-color: rgba(73, 73, 73, 0.575);
+  }
+  
+  #block:hover{
+    transform: scale(1.5);
+    background-color: #FEC601;
+    color: black;
+  }
+  
+  #rspd{
+    display: none;
+    margin-top: 7px;
+    font-size: 20px;
+    color: white;
+  }
+  
+  #rspd i{
+    margin-right: 12px;
+  }
+  
+  #rspd i:hover{
+    color: #FEC601;
+  }
+  
+  #tmpsrch{
+    display: none;
+  }
+  
+  #tmpsrch input{
+    position: absolute;
+    width: 80vw;
+    height: 40px;
+    border: solid;
+    border-radius: 3px;
+    border-width: 2px;
+    border-color: rgba(112, 112, 112, 0.11);
+    background-color: white;
+    font-size: 16px;
+    padding: 10px;
+    letter-spacing: 1px;
+    color: black;
+  }
+  
+  #expandednav{
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    z-index: 99;
+    top: 9.4%;
+    width: 100vw;
+    height: 76vh;
+    /* background-color: rgba(255, 255, 255, 0.034) */
+    background-color: #483ed8f1;
+  }
+  
+  #uf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    width: 95vw;
+    height: 150px;
+    /* background-color: turquoise; */
+  }
+  
+  #eone, #etwo, #ethree, #efour, #efour, #efive, #esix{
+    font-size: 22px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 47.5vw;
+    height: inherit;
+    /* background-color: khaki; */
+  }
+  
+  #eone, #etwo, #ethree, #efour, #efour, #efive, #esix i{
+    color: white;
+    font-size: 27px;
+  }
+  
+  #us{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    width: 95vw;
+    height: 150px;
+    /* background-color: turquoise; */
+  }
+  
+  #ut{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+    height: 150px;
+    /* background-color: turquoise; */
+  }
+  
+  #expandednav i:hover{
+    color: #FEC601;
+  }
+  
+  #expandednav a:hover{
+    color: #FEC601;
+  }
+  
+  #expandednav a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Trageting Mobile Screen */
+  @media(max-width: 968px){
+    #leftnav h1{
+      margin-left: 20px;
+      font-size: 35px;
+    }
+  
+    #centernav{
+      display: none;
+    }
+  
+    #rightnav{
+      display: none;
+    }
+  
+    #rspd{
+      display: flex;
+    }
+  
+    #txt p{
+      margin-top: 5px;
+      font-size: 28px;
+    }
+  
+    .activities{
+      border-radius: 5px;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80px;
+      height: 36px;
+      background-color: #FEC601;
+      color: #2A2479;
+      font-size: 14px;
+    }
+  
+    #sources{
+      width: 90vw;
+      height: 8vh;
+    }
+  
+    .crcl{
+      width: 30px;
+      height: 30px;
+    }
+  
+    .crcl img{
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+    }
+  
+    .crcl:nth-child(1){
+      width: 40px !important;
+      height: 40px !important;
+    }
+  
+    #frim img{
+      width: 40px;
+      height: 40px;
+    }
+  
+    .crcl:hover{
+      transform: scale(.75);
+    }
+  
+    #head{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      left: 12px;
+      width: 335px;
+    }
+  
+    #head h3{
+      font-size: 15px;
+      font-weight: 100;
+      margin-left: 0;
+    }
+  
+    #head i{
+      font-size: 16px;
+      font-weight: 100;
+    }
+  
+    #content .cardcover{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .cardcover{
+      width: 75vw;
+      /* background-color: tomato; */
+    }
+  
+    .card{
+      width: 75vw;
+      margin-bottom: 20px;
+    }
+  
+    .top{
+      background-size: contain !important;
+      background-position: center !important;
+    }
+  
+    #tmpsrch input{
+      position: absolute;
+      top: 10px;
+      left: 17px;
+      width: 90vw;
+    }
+  
+  
+    #two{
+      /* display: none !important; */
+      position: absolute;
+      top: 88% !important;
+    }
+    #three{
+      display: none !important;
+    }
+    #four{
+      display: none !important;
+    }
+    #five{
+      display: none !important;
+    }
+    #six{
+      display: none !important;
+    }
+  
+  }

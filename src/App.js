@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Nav from './MyComponents/Nav'
+import Responsivenav from './MyComponents/Responsivenav'
+import Centerselectionzone from './MyComponents/Centerselectionzone'
+import Backd from './MyComponents/Backd';
+import Contentzone from './MyComponents/Contentzone'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div id="webpage">
+      <Nav />
+      <Centerselectionzone />
+      <Backd />
+      <Contentzone />
+      <Responsivenav />
+      </div>
     </div>
   );
 }
